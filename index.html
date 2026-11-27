@@ -6,40 +6,57 @@
 
     <title>Raquel Suzan | Lash Studio</title>
 
-    <meta name="description" content="Realce sua beleza natural com Raquel Suzan Lash Studio. Conheça nossos serviços e agende seu horário.">
+    <meta name="description" content="Raquel Suzan Lash Studio. Beleza, delicadeza e autoestima. Conheça nosso espaço e agende seu horário.">
+
+    <meta name="theme-color" content="#f8eee9">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+    <!-- CABEÇALHO -->
+
     <header class="header">
-        <a href="#" class="logo">
+
+        <a href="#inicio" class="logo">
             RAQUEL SUZAN
             <span>LASH STUDIO</span>
         </a>
 
-        <nav>
+        <nav class="nav-links">
             <a href="#inicio">Início</a>
             <a href="#sobre">Sobre mim</a>
             <a href="#servicos">Serviços</a>
-            <a href="#galeria">Galeria</a>
+            <a href="#galeria">Inspirações</a>
             <a href="#contato">Contato</a>
         </nav>
+
+        <button class="menu-toggle" aria-label="Abrir menu">
+            ☰
+        </button>
+
     </header>
 
     <main>
 
-        <section class="hero" id="inicio">
-            <div class="hero-content">
-                <span class="eyebrow">BELEZA • DELICADEZA • AUTOESTIMA</span>
+        <!-- INÍCIO -->
 
-                <h1>Seu olhar merece<br>
+        <section class="hero" id="inicio">
+
+            <div class="hero-content">
+
+                <span class="eyebrow">
+                    BELEZA • DELICADEZA • AUTOESTIMA
+                </span>
+
+                <h1>
+                    Seu olhar merece<br>
                     <em>um toque especial.</em>
                 </h1>
 
@@ -51,108 +68,260 @@
                 <a href="#contato" class="button">
                     AGENDAR MEU HORÁRIO
                 </a>
+
             </div>
 
             <div class="hero-image">
-                <img src="imagens/raquel.jpg"
-                     alt="Raquel Suzan, profissional de cílios">
+
+                <img
+                    src="imagens/raquel.jpg"
+                    alt="Raquel Suzan, Lash Studio">
+
             </div>
+
         </section>
 
-        <section class="about" id="sobre">
-            <span class="eyebrow">UM POUCO SOBRE MIM</span>
 
-            <h2>Beleza que começa<br>
+        <!-- SOBRE MIM -->
+
+        <section class="about" id="sobre">
+
+            <span class="eyebrow">
+                UM POUCO SOBRE MIM
+            </span>
+
+            <h2>
+                Beleza que começa<br>
                 <em>no olhar.</em>
             </h2>
 
             <p>
                 Seja bem-vinda ao meu espaço!
+
                 Aqui cada atendimento é pensado para valorizar
                 sua beleza e proporcionar um momento especial
-                de cuidado e autoestima.
+                de cuidado, carinho e autoestima.
+
             </p>
 
-            <strong>Com carinho, Raquel Suzan.</strong>
+            <strong>
+                Com carinho, Raquel Suzan.
+            </strong>
+
         </section>
 
+
+        <!-- SERVIÇOS -->
+
         <section class="services" id="servicos">
-            <span class="eyebrow">CUIDADO EM CADA DETALHE</span>
+
+            <span class="eyebrow">
+                CUIDADO EM CADA DETALHE
+            </span>
 
             <h2>Meus serviços</h2>
 
             <div class="service-grid">
+
                 <article class="service-card">
+
                     <span>01</span>
+
                     <h3>Extensão de cílios</h3>
-                    <p>Um olhar realçado e personalizado para você.</p>
+
+                    <p>
+                        Um olhar realçado e personalizado
+                        para valorizar sua beleza.
+                    </p>
+
                 </article>
 
+
                 <article class="service-card">
+
                     <span>02</span>
+
                     <h3>Manutenção</h3>
-                    <p>Cuidados para preservar a beleza do seu olhar.</p>
+
+                    <p>
+                        Cuidados para preservar a beleza
+                        e a durabilidade dos cílios.
+                    </p>
+
                 </article>
 
+
                 <article class="service-card">
+
                     <span>03</span>
+
                     <h3>Design personalizado</h3>
-                    <p>Um resultado pensado para valorizar seus olhos.</p>
+
+                    <p>
+                        Um resultado pensado para valorizar
+                        o formato dos seus olhos.
+                    </p>
+
                 </article>
+
             </div>
+
         </section>
+
+
+        <!-- GALERIA DE INSPIRAÇÕES -->
 
         <section class="gallery" id="galeria">
-            <span class="eyebrow">MEU TRABALHO</span>
-            <h2>Um olhar, mil possibilidades.</h2>
+
+            <span class="eyebrow">
+                UNIVERSO DA BELEZA
+            </span>
+
+            <h2>
+                Inspirações para<br>
+                <em>o seu olhar.</em>
+            </h2>
+
+            <p class="gallery-intro">
+                Descubra estilos e possibilidades para
+                realçar ainda mais a sua beleza.
+            </p>
 
             <div class="gallery-grid">
-                <div class="gallery-placeholder">Seu trabalho 01</div>
-                <div class="gallery-placeholder">Seu trabalho 02</div>
-                <div class="gallery-placeholder">Seu trabalho 03</div>
+
+                <div class="gallery-item">
+
+                    <img
+                        src="https://images.pexels.com/photos/5128234/pexels-photo-5128234.jpeg?auto=compress&dpr=1&w=800"
+                        alt="Inspiração de beleza e cílios"
+                        loading="lazy">
+
+                    <span>Beleza em cada detalhe</span>
+
+                </div>
+
+
+                <div class="gallery-item">
+
+                    <img
+                        src="https://images.pexels.com/photos/33723106/pexels-photo-33723106/free-photo-of-professional-eyelash-extension-application-close-up.jpeg?auto=compress&dpr=1&w=800"
+                        alt="Inspiração de aplicação de cílios"
+                        loading="lazy">
+
+                    <span>Delicadeza e cuidado</span>
+
+                </div>
+
+
+                <div class="gallery-item">
+
+                    <img
+                        src="https://images.pexels.com/photos/34930118/pexels-photo-34930118/free-photo-of-close-up-of-eyelash-extension-application-in-salon.jpeg?auto=compress&dpr=1&w=800"
+                        alt="Inspiração de procedimento de cílios"
+                        loading="lazy">
+
+                    <span>Um olhar especial</span>
+
+                </div>
+
             </div>
+
+            <small class="gallery-note">
+                Imagens ilustrativas de referência.
+                Em breve, fotos exclusivas dos nossos atendimentos.
+            </small>
+
         </section>
 
-        <section class="contact" id="contato">
-            <span class="eyebrow">SEU MOMENTO ESPECIAL</span>
 
-            <h2>Vamos realçar<br>
+        <!-- CONTATO -->
+
+        <section class="contact" id="contato">
+
+            <span class="eyebrow">
+                SEU MOMENTO ESPECIAL
+            </span>
+
+            <h2>
+                Vamos realçar<br>
                 <em>sua beleza?</em>
             </h2>
 
-            <p>Será um prazer cuidar de você!</p>
+            <p>
+                Será um prazer cuidar de você!
+            </p>
+
 
             <a
                 href="https://wa.me/555193852951?text=Ol%C3%A1!%20Conheci%20seu%20trabalho%20pelo%20site%20da%20Suzan%20Lash%20Studio%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio."
                 class="button whatsapp"
                 target="_blank"
                 rel="noopener noreferrer">
+
                 AGENDAR PELO WHATSAPP
+
             </a>
+
 
             <a
                 href="https://www.instagram.com/raquel_suzan2/"
                 class="btn-instagram"
                 target="_blank"
                 rel="noopener noreferrer">
+
                 ◎ CONHEÇA NOSSO INSTAGRAM
+
             </a>
+
         </section>
 
     </main>
 
+
+    <!-- RODAPÉ -->
+
     <footer>
+
         <h3>RAQUEL SUZAN</h3>
+
         <p>LASH STUDIO</p>
 
-        <a href="https://www.instagram.com/raquel_suzan2/"
-           target="_blank"
-           rel="noopener noreferrer">
+        <a
+            href="https://www.instagram.com/raquel_suzan2/"
+            target="_blank"
+            rel="noopener noreferrer">
+
             Instagram @raquel_suzan2
+
         </a>
 
-        <small>© 2026 Raquel Suzan. Todos os direitos reservados.</small>
+        <p>
+            Beleza, delicadeza e autoestima.
+        </p>
+
+        <small>
+            © 2026 Raquel Suzan.
+            Todos os direitos reservados.
+        </small>
+
     </footer>
+
+
+    <!-- BOTÃO FLUTUANTE DO WHATSAPP -->
+
+    <a
+        href="https://wa.me/555193852951?text=Ol%C3%A1!%20Gostaria%20de%20conhecer%20os%20servi%C3%A7os%20da%20Suzan%20Lash%20Studio."
+        class="whatsapp-float"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Conversar pelo WhatsApp">
+
+        WhatsApp
+
+    </a>
+
+
+    <!-- JAVASCRIPT -->
 
     <script src="script.js"></script>
 
