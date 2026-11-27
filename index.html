@@ -3,20 +3,190 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Raquel Suzan | Lash Studio</title>
-<meta name="description" content="Raquel Suzan Lash Studio. Beleza, delicadeza e autoestima. Conheça nosso espaço e agende seu horário.">
+
+<meta name="description" content="Raquel Suzan Lash Studio. Beleza, delicadeza e autoestima. Agende seu horário.">
 <meta name="theme-color" content="#f8eee9">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
+
+<style>
+/* AJUSTES GERAIS */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* GALERIA DE INSPIRAÇÕES */
+.gallery-grid {
+    width: 100%;
+    max-width: 850px;
+    margin: 30px auto 0;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    align-items: start;
+}
+
+.gallery-item {
+    width: 100%;
+    min-width: 0;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.gallery-item img {
+    display: block;
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+}
+
+.gallery-item span {
+    display: block;
+    padding: 10px 4px;
+    text-align: center;
+    font-size: 13px;
+}
+
+.gallery-note {
+    display: block;
+    margin-top: 15px;
+    text-align: center;
+    font-size: 11px;
+}
+
+/* CONTATOS */
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin: 30px auto 10px;
+}
+
+.social-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    width: 190px;
+    min-height: 145px;
+    padding: 20px 14px;
+    border: 1px solid #e8d6ce;
+    border-radius: 12px;
+    color: #76594f;
+    text-decoration: none;
+    background: #fffaf7;
+    text-align: center;
+    transition: transform .2s ease, background .2s ease;
+}
+
+.social-card:hover {
+    transform: translateY(-3px);
+    background: #f8eee9;
+}
+
+.social-card svg {
+    width: 29px;
+    height: 29px;
+    fill: currentColor;
+}
+
+.social-card strong {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.social-card span {
+    font-size: 13px;
+    color: #9b7d72;
+}
+
+/* VERSÍCULO DISCRETO */
+.bible-verse {
+    padding: 22px 15px 28px;
+    text-align: center;
+    color: #a58b80;
+    font-family: 'Playfair Display', serif;
+}
+
+.bible-verse p {
+    margin: 0 auto 5px;
+    font-size: 13px;
+    font-style: italic;
+    line-height: 1.7;
+}
+
+.bible-verse small {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px;
+    letter-spacing: 1px;
+    opacity: .85;
+}
+
+/* CELULAR */
+@media (max-width: 600px) {
+    .gallery-grid {
+        max-width: 430px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .gallery-item img {
+        height: 145px;
+    }
+
+    .gallery-item span {
+        font-size: 12px;
+    }
+
+    .social-links {
+        gap: 12px;
+    }
+
+    .social-card {
+        width: 155px;
+        min-height: 135px;
+        padding: 16px 10px;
+    }
+
+    .bible-verse {
+        padding-top: 18px;
+    }
+}
+
+@media (max-width: 350px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        max-width: 280px;
+    }
+
+    .gallery-item img {
+        height: 175px;
+    }
+}
+</style>
 </head>
 
 <body>
 
+<!-- CABEÇALHO -->
 <header class="header">
+
     <a href="#inicio" class="logo">
         RAQUEL SUZAN
         <span>LASH STUDIO</span>
@@ -31,13 +201,19 @@
     </nav>
 
     <button class="menu-toggle" aria-label="Abrir menu">☰</button>
+
 </header>
 
 <main>
 
+<!-- INÍCIO -->
 <section class="hero" id="inicio">
+
     <div class="hero-content">
-        <span class="eyebrow">BELEZA • DELICADEZA • AUTOESTIMA</span>
+
+        <span class="eyebrow">
+            BELEZA • DELICADEZA • AUTOESTIMA
+        </span>
 
         <h1>
             Seu olhar merece<br>
@@ -49,18 +225,26 @@
             carinho e atenção em cada detalhe.
         </p>
 
-        <a href="#contato" class="button">AGENDAR MEU HORÁRIO</a>
+        <a href="#contato" class="button">
+            AGENDAR MEU HORÁRIO
+        </a>
+
     </div>
 
     <div class="hero-image">
+
         <img
             src="https://eliteaae.com/cdn/shop/files/Advanced_Lash_Extension_Training_Courses_Austin.png?height=800&v=1740511330"
-            alt="Profissional de pele negra realizando aplicação de extensão de cílios com pinças"
+            alt="Profissional realizando aplicação de extensão de cílios"
             loading="eager">
+
     </div>
+
 </section>
 
+<!-- SOBRE -->
 <section class="about" id="sobre">
+
     <span class="eyebrow">UM POUCO SOBRE MIM</span>
 
     <h2>
@@ -75,35 +259,52 @@
     </p>
 
     <strong>Com carinho, Raquel Suzan.</strong>
+
 </section>
 
+<!-- SERVIÇOS -->
 <section class="services" id="servicos">
+
     <span class="eyebrow">CUIDADO EM CADA DETALHE</span>
 
     <h2>Meus serviços</h2>
 
     <div class="service-grid">
+
         <article class="service-card">
             <span>01</span>
             <h3>Extensão de cílios</h3>
-            <p>Um olhar realçado e personalizado para valorizar sua beleza.</p>
+            <p>
+                Um olhar realçado e personalizado
+                para valorizar sua beleza.
+            </p>
         </article>
 
         <article class="service-card">
             <span>02</span>
             <h3>Manutenção</h3>
-            <p>Cuidados para preservar a beleza e a durabilidade dos cílios.</p>
+            <p>
+                Cuidados para preservar a beleza
+                e a durabilidade dos cílios.
+            </p>
         </article>
 
         <article class="service-card">
             <span>03</span>
             <h3>Design personalizado</h3>
-            <p>Um resultado pensado para valorizar o formato dos seus olhos.</p>
+            <p>
+                Um resultado pensado para valorizar
+                o formato dos seus olhos.
+            </p>
         </article>
+
     </div>
+
 </section>
 
+<!-- INSPIRAÇÕES -->
 <section class="gallery" id="galeria">
+
     <span class="eyebrow">UNIVERSO DA BELEZA</span>
 
     <h2>
@@ -112,7 +313,8 @@
     </h2>
 
     <p class="gallery-intro">
-        Descubra estilos e possibilidades para realçar ainda mais sua beleza.
+        Descubra estilos e possibilidades para
+        realçar ainda mais sua beleza.
     </p>
 
     <div class="gallery-grid">
@@ -122,14 +324,16 @@
                 src="https://images.pexels.com/photos/5128234/pexels-photo-5128234.jpeg?auto=compress&dpr=1&w=800"
                 alt="Inspiração de beleza e cílios"
                 loading="lazy">
+
             <span>Beleza em cada detalhe</span>
         </div>
 
         <div class="gallery-item">
             <img
                 src="https://eliteaae.com/cdn/shop/files/Advanced_Lash_Extension_Training_Courses_Austin.png?height=800&v=1740511330"
-                alt="Profissional negra aplicando extensão de cílios com pinças"
+                alt="Aplicação de extensão de cílios"
                 loading="lazy">
+
             <span>Delicadeza e cuidado</span>
         </div>
 
@@ -138,6 +342,7 @@
                 src="https://images.pexels.com/photos/34930118/pexels-photo-34930118/free-photo-of-close-up-of-eyelash-extension-application-in-salon.jpeg?auto=compress&dpr=1&w=800"
                 alt="Inspiração de procedimento de cílios"
                 loading="lazy">
+
             <span>Um olhar especial</span>
         </div>
 
@@ -147,9 +352,12 @@
         Imagens ilustrativas de referência. Em breve,
         fotos exclusivas dos nossos atendimentos.
     </small>
+
 </section>
 
+<!-- CONTATO -->
 <section class="contact" id="contato">
+
     <span class="eyebrow">SEU MOMENTO ESPECIAL</span>
 
     <h2>
@@ -159,45 +367,84 @@
 
     <p>Será um prazer cuidar de você!</p>
 
-    <a
-        href="https://wa.me/555193852951?text=Ol%C3%A1!%20Conheci%20seu%20trabalho%20pelo%20site%20da%20Suzan%20Lash%20Studio%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio."
-        class="button whatsapp"
-        target="_blank"
-        rel="noopener noreferrer">
-        AGENDAR PELO WHATSAPP
-    </a>
+    <div class="social-links">
 
-    <a
-        href="https://www.instagram.com/raquel_suzan2/"
-        class="btn-instagram"
-        target="_blank"
-        rel="noopener noreferrer">
-        ◎ CONHEÇA NOSSO INSTAGRAM
-    </a>
+        <!-- INSTAGRAM -->
+        <a
+            href="https://www.instagram.com/raquel_suzan2/"
+            class="social-card"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram de Raquel Suzan">
+
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 5-5V7c0-2.76-2.24-5-5-5H7zm0 2h10c1.66 0 3 1.34 3 3v10c0 1.66-1.34 3-3 3H7c-1.66 0-3-1.34-3-3V7c0-1.66 1.34-3 3-3zm10.5 1.5a1 1 0 1 0 0 2 1 1 0 0 0 0-2zM12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6z"/>
+            </svg>
+
+            <strong>Raquel Suzan</strong>
+            <span>@raquel_suzan2</span>
+
+        </a>
+
+        <!-- WHATSAPP -->
+        <a
+            href="https://wa.me/555193852951?text=Ol%C3%A1!%20Conheci%20seu%20trabalho%20pelo%20site%20da%20Raquel%20Suzan%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio."
+            class="social-card"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="WhatsApp de Raquel Suzan">
+
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 2a9.9 9.9 0 0 0-8.56 14.86L2 22l5.29-1.39A10 10 0 1 0 12 2zm0 2a8 8 0 0 1 0 16c-1.35 0-2.67-.34-3.85-.99l-.38-.21-3.14.82.84-3.05-.23-.39A8 8 0 0 1 12 4zm-3.4 3.5c-.2 0-.5.08-.76.37-.26.29-.99.97-.99 2.36s1.02 2.73 1.16 2.92c.14.19 1.97 3.15 4.87 4.29 2.4.94 2.9.75 3.42.7.52-.05 1.68-.69 1.92-1.36.24-.67.24-1.24.17-1.36-.07-.12-.26-.19-.55-.33-.29-.14-1.68-.83-1.94-.92-.26-.1-.45-.14-.64.15-.19.29-.73.92-.9 1.11-.16.19-.33.22-.62.07-.29-.14-1.21-.45-2.31-1.43-.85-.76-1.43-1.7-1.6-1.99-.17-.29-.02-.45.13-.6.13-.13.29-.33.43-.5.14-.17.19-.29.29-.48.1-.19.05-.36-.02-.5-.07-.14-.64-1.55-.88-2.12-.23-.55-.47-.48-.64-.49z"/>
+            </svg>
+
+            <strong>Fale com a Raquel</strong>
+            <span>Agende seu horário</span>
+
+        </a>
+
+    </div>
+
 </section>
+
+<!-- MENSAGEM BÍBLICA DISCRETA -->
+<div class="bible-verse">
+
+    <p>
+        “Eu te louvo porque me fizeste de modo especial e admirável.”
+    </p>
+
+    <small>SALMOS 139:14</small>
+
+</div>
 
 </main>
 
+<!-- RODAPÉ -->
 <footer>
-    <h3>RAQUEL SUZAN</h3>
-    <p>LASH STUDIO</p>
 
-    <a href="https://www.instagram.com/raquel_suzan2/" target="_blank" rel="noopener noreferrer">
-        Instagram @raquel_suzan2
-    </a>
+    <h3>RAQUEL SUZAN</h3>
+
+    <p>LASH STUDIO</p>
 
     <p>Beleza, delicadeza e autoestima.</p>
 
-    <small>© 2026 Raquel Suzan. Todos os direitos reservados.</small>
+    <small>
+        © 2026 Raquel Suzan. Todos os direitos reservados.
+    </small>
+
 </footer>
 
+<!-- BOTÃO FLUTUANTE DO WHATSAPP -->
 <a
-    href="https://wa.me/555193852951?text=Ol%C3%A1!%20Gostaria%20de%20conhecer%20os%20servi%C3%A7os%20da%20Suzan%20Lash%20Studio."
+    href="https://wa.me/555193852951?text=Ol%C3%A1!%20Gostaria%20de%20conhecer%20os%20servi%C3%A7os%20da%20Raquel%20Suzan."
     class="whatsapp-float"
     target="_blank"
     rel="noopener noreferrer"
     aria-label="Conversar pelo WhatsApp">
+
     WhatsApp
+
 </a>
 
 <script src="script.js"></script>
