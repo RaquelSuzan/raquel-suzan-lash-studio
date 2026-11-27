@@ -1,460 +1,817 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f7eee8">
+  <meta name="description" content="Raquel Suzan Lash Studio. Realce sua beleza com cílios personalizados. Agende seu horário!">
+  <title>Raquel Suzan | Lash Studio</title>
 
-<title>Raquel Suzan | Lash Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-<meta name="description" content="Raquel Suzan Lash Studio. Beleza, delicadeza e autoestima. Agende seu horário.">
-<meta name="theme-color" content="#f8eee9">
+  <style>
+    :root {
+      --cream: #fbf5ef;
+      --beige: #ead9ca;
+      --rose: #c99b91;
+      --rose-dark: #98675e;
+      --brown: #49352f;
+      --green: #244536;
+      --gold: #c6a15b;
+      --white: #fffdfb;
+      --shadow: 0 14px 35px rgba(75, 48, 38, .13);
+    }
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 85px;
+    }
 
-<link rel="stylesheet" href="style.css">
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--cream);
+      color: var(--brown);
+      overflow-x: hidden;
+    }
 
-<style>
-/* AJUSTES GERAIS */
-* {
-    box-sizing: border-box;
-}
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-html {
-    scroll-behavior: smooth;
-}
+    button {
+      font: inherit;
+    }
 
-/* GALERIA DE INSPIRAÇÕES */
-.gallery-grid {
-    width: 100%;
-    max-width: 850px;
-    margin: 30px auto 0;
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 18px;
-    align-items: start;
-}
+    .christmas-lights {
+      height: 9px;
+      background:
+        radial-gradient(circle, #e7c779 2px, transparent 4px) 0 0 / 38px 9px repeat-x,
+        linear-gradient(90deg, #244536, #c6a15b, #244536);
+      box-shadow: 0 2px 12px #c6a15b66;
+    }
 
-.gallery-item {
-    width: 100%;
-    min-width: 0;
-    overflow: hidden;
-    border-radius: 10px;
-}
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(251, 245, 239, .93);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(198, 161, 91, .25);
+    }
 
-.gallery-item img {
-    display: block;
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    object-position: center;
-    border-radius: 10px;
-}
+    .header-inner {
+      max-width: 1160px;
+      min-height: 76px;
+      padding: 12px 22px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+    }
 
-.gallery-item span {
-    display: block;
-    padding: 10px 4px;
-    text-align: center;
-    font-size: 13px;
-}
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      color: var(--brown);
+      line-height: 1.15;
+    }
 
-.gallery-note {
-    display: block;
-    margin-top: 15px;
-    text-align: center;
-    font-size: 11px;
-}
+    .logo span {
+      display: block;
+      color: var(--rose-dark);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 10px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      margin-top: 5px;
+    }
 
-/* CONTATOS */
-.social-links {
-    display: flex;
-    justify-content: center;
-    align-items: stretch;
-    flex-wrap: wrap;
-    gap: 18px;
-    margin: 30px auto 10px;
-}
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      font-size: 13px;
+    }
 
-.social-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 9px;
-    width: 190px;
-    min-height: 145px;
-    padding: 20px 14px;
-    border: 1px solid #e8d6ce;
-    border-radius: 12px;
-    color: #76594f;
-    text-decoration: none;
-    background: #fffaf7;
-    text-align: center;
-    transition: transform .2s ease, background .2s ease;
-}
+    nav a {
+      transition: color .25s;
+    }
 
-.social-card:hover {
-    transform: translateY(-3px);
-    background: #f8eee9;
-}
+    nav a:hover {
+      color: var(--rose-dark);
+    }
 
-.social-card svg {
-    width: 29px;
-    height: 29px;
-    fill: currentColor;
-}
+    .quick-menu {
+      position: relative;
+    }
 
-.social-card strong {
-    font-size: 15px;
-    font-weight: 600;
-}
+    .menu-button {
+      border: 1px solid #d9c2ad;
+      background: #fffaf6;
+      color: var(--brown);
+      border-radius: 50%;
+      width: 43px;
+      height: 43px;
+      cursor: pointer;
+      font-size: 22px;
+      box-shadow: 0 5px 15px #49352f15;
+      transition: .3s;
+    }
 
-.social-card span {
-    font-size: 13px;
-    color: #9b7d72;
-}
+    .menu-button:hover {
+      transform: translateY(-3px) rotate(8deg);
+      box-shadow: 0 9px 20px #49352f25;
+    }
 
-/* SALMO COM CONTRASTE E SOMBRA */
-.bible-verse {
-    padding: 22px 15px 28px;
-    text-align: center;
-    color: #49352f;
-    font-family: 'Playfair Display', serif;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.18);
-}
+    .menu-panel {
+      display: none;
+      position: absolute;
+      top: 54px;
+      right: 0;
+      width: 245px;
+      padding: 10px;
+      background: #fffaf6;
+      border: 1px solid #ead9ca;
+      border-radius: 17px;
+      box-shadow: 0 18px 40px #49352f25;
+    }
 
-.bible-verse p {
-    margin: 0 auto 5px;
-    max-width: 600px;
-    font-size: 13px;
-    font-style: italic;
-    font-weight: 500;
-    line-height: 1.7;
-    color: #382923;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.20);
-}
+    .quick-menu[open] .menu-panel {
+      display: block;
+      animation: menuIn .2s ease;
+    }
 
-.bible-verse small {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 10px;
-    letter-spacing: 1px;
-    color: #62483e;
-    font-weight: 700;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
-}
+    .menu-panel a {
+      display: block;
+      padding: 13px 12px;
+      font-size: 13px;
+      border-radius: 10px;
+    }
 
-/* CELULAR */
-@media (max-width: 600px) {
+    .menu-panel a:hover {
+      background: #f2e5dc;
+      color: var(--rose-dark);
+    }
+
+    @keyframes menuIn {
+      from { opacity: 0; transform: translateY(-8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 75px 22px 85px;
+      background:
+        linear-gradient(110deg, rgba(251,245,239,.97), rgba(251,245,239,.83)),
+        url('https://images.unsplash.com/photo-1512389142860-9c449e58a543?auto=format&fit=crop&w=1600&q=85') center/cover;
+    }
+
+    .hero::before,
+    .hero::after {
+      content: "✦";
+      position: absolute;
+      color: #c6a15b;
+      opacity: .45;
+      font-size: 45px;
+      animation: sparkle 4s ease-in-out infinite;
+      pointer-events: none;
+    }
+
+    .hero::before {
+      top: 13%;
+      left: 7%;
+    }
+
+    .hero::after {
+      right: 8%;
+      bottom: 15%;
+      animation-delay: 1.5s;
+    }
+
+    @keyframes sparkle {
+      0%, 100% { transform: scale(.75) rotate(0); opacity: .25; }
+      50% { transform: scale(1.2) rotate(25deg); opacity: .8; }
+    }
+
+    .hero-inner {
+      max-width: 1120px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      align-items: center;
+      gap: 55px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .season-label {
+      display: inline-block;
+      color: var(--green);
+      background: #e8eee5;
+      border: 1px solid #cbd8c9;
+      border-radius: 30px;
+      padding: 9px 16px;
+      font-size: 11px;
+      letter-spacing: 1.3px;
+      margin-bottom: 23px;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(39px, 5vw, 62px);
+      font-weight: 500;
+      line-height: 1.12;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 em {
+      color: var(--rose-dark);
+      font-weight: 400;
+    }
+
+    .hero p {
+      max-width: 490px;
+      line-height: 1.8;
+      color: #715d54;
+      font-size: 15px;
+      margin-bottom: 28px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+    }
+
+    .btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      padding: 14px 22px;
+      border-radius: 30px;
+      font-size: 13px;
+      font-weight: 700;
+      transition: transform .3s, box-shadow .3s;
+      box-shadow: 0 7px 0 rgba(60, 38, 30, .12), 0 12px 22px rgba(60, 38, 30, .12);
+    }
+
+    .btn:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 11px 0 rgba(60, 38, 30, .08), 0 18px 28px rgba(60, 38, 30, .18);
+    }
+
+    .btn-primary {
+      background: var(--green);
+      color: white;
+    }
+
+    .btn-secondary {
+      background: #fffaf6;
+      color: var(--brown);
+      border: 1px solid #d9c2ad;
+    }
+
+    .hero-photo {
+      position: relative;
+      max-width: 450px;
+      width: 100%;
+      margin: auto;
+      border-radius: 190px 190px 25px 25px;
+      padding: 10px;
+      background: linear-gradient(140deg, #f5e6cf, #c6a15b, #fffaf4);
+      box-shadow: 0 25px 55px rgba(61, 42, 31, .22);
+      transform: perspective(1000px) rotateY(-3deg);
+      transition: transform .5s;
+    }
+
+    .hero-photo:hover {
+      transform: perspective(1000px) rotateY(0) translateY(-5px);
+    }
+
+    .hero-photo img {
+      display: block;
+      width: 100%;
+      height: 490px;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 180px 180px 18px 18px;
+    }
+
+    section {
+      padding: 78px 22px;
+    }
+
+    .section-inner {
+      max-width: 1080px;
+      margin: auto;
+    }
+
+    .section-heading {
+      text-align: center;
+      margin-bottom: 38px;
+    }
+
+    .section-heading small {
+      color: var(--rose-dark);
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 10px;
+      font-weight: 700;
+    }
+
+    .section-heading h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(30px, 4vw, 42px);
+      font-weight: 500;
+      margin-top: 10px;
+    }
+
+    .section-heading p {
+      margin: 12px auto 0;
+      max-width: 570px;
+      color: #806d63;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .about {
+      background: #fffaf6;
+    }
+
+    .about-card {
+      max-width: 790px;
+      margin: auto;
+      padding: 35px;
+      text-align: center;
+      border-radius: 24px;
+      background: linear-gradient(145deg, #fff, #f7ebe3);
+      box-shadow: var(--shadow);
+      border: 1px solid #f0e1d6;
+      line-height: 1.9;
+      color: #725e54;
+    }
+
+    .services {
+      background: linear-gradient(180deg, #f7eee8, #f2e5dc);
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .service-card {
+      padding: 30px 22px;
+      text-align: center;
+      border-radius: 20px;
+      background: linear-gradient(145deg, #fffdfb, #f5e9e0);
+      border: 1px solid #ead8ca;
+      box-shadow: 0 12px 25px #49352f12;
+      transition: transform .35s, box-shadow .35s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-9px) rotateX(3deg);
+      box-shadow: 0 22px 35px #49352f20;
+    }
+
+    .service-icon {
+      font-size: 31px;
+      margin-bottom: 15px;
+    }
+
+    .service-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+
+    .service-card p {
+      color: #806d63;
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    .gallery {
+      background: #fffaf6;
+    }
+
     .gallery-grid {
+      max-width: 850px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 17px;
+      box-shadow: 0 12px 24px #49352f20;
+      transition: transform .35s, box-shadow .35s;
+    }
+
+    .gallery-grid img:hover {
+      transform: translateY(-7px) scale(1.025);
+      box-shadow: 0 18px 30px #49352f30;
+    }
+
+    .christmas-banner {
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+      color: white;
+      background:
+        linear-gradient(100deg, rgba(27, 60, 44, .94), rgba(43, 78, 57, .88)),
+        url('https://images.unsplash.com/photo-1543589077-47d81606c1bf?auto=format&fit=crop&w=1500&q=85') center/cover;
+      padding: 68px 22px;
+    }
+
+    .christmas-banner::before {
+      content: "✧  ✦  ❄️  ✦  ✧";
+      display: block;
+      color: #e8ce91;
+      font-size: 22px;
+      letter-spacing: 12px;
+      margin-bottom: 18px;
+    }
+
+    .christmas-banner h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(30px, 4vw, 45px);
+      font-weight: 500;
+      margin-bottom: 14px;
+    }
+
+    .christmas-banner p {
+      max-width: 570px;
+      margin: auto auto 25px;
+      color: #f5e9d7;
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .christmas-banner .btn {
+      background: linear-gradient(135deg, #f2dfb3, #c6a15b);
+      color: #3d3325;
+    }
+
+    .contact {
+      background: linear-gradient(180deg, #f7eee8, #f3e7de);
+    }
+
+    .contact-grid {
+      max-width: 760px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .contact-card {
+      padding: 25px;
+      border-radius: 20px;
+      background: #fffaf6;
+      border: 1px solid #ead8ca;
+      text-align: center;
+      box-shadow: var(--shadow);
+      transition: transform .3s;
+    }
+
+    .contact-card:hover {
+      transform: translateY(-6px);
+    }
+
+    .contact-card .symbol {
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+
+    .contact-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      margin-bottom: 7px;
+    }
+
+    .contact-card p {
+      color: #806d63;
+      font-size: 13px;
+      margin-bottom: 14px;
+    }
+
+    .contact-card a {
+      color: var(--rose-dark);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .verse {
+      background: #fffaf6;
+      text-align: center;
+      padding: 42px 22px;
+    }
+
+    .verse p {
+      font-family: 'Playfair Display', serif;
+      font-size: 19px;
+      color: #49352f;
+      text-shadow: 0 2px 8px #c6a15b35;
+      line-height: 1.6;
+    }
+
+    .verse small {
+      display: block;
+      margin-top: 10px;
+      color: #987d6d;
+      letter-spacing: 2px;
+      font-size: 10px;
+    }
+
+    footer {
+      background: #203d30;
+      color: #f7eee8;
+      text-align: center;
+      padding: 27px 20px;
+      font-size: 12px;
+      line-height: 1.8;
+    }
+
+    footer strong {
+      font-family: 'Playfair Display', serif;
+      font-size: 19px;
+      font-weight: 500;
+      color: #e9d2a1;
+    }
+
+    .floating-whatsapp {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      z-index: 90;
+      width: 57px;
+      height: 57px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #248b54;
+      color: white;
+      font-size: 26px;
+      box-shadow: 0 8px 22px #163e2b55;
+      transition: transform .3s;
+    }
+
+    .floating-whatsapp:hover {
+      transform: translateY(-5px) scale(1.07);
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(25px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 760px) {
+      .header-inner {
+        min-height: 68px;
+      }
+
+      nav {
+        display: none;
+      }
+
+      .hero {
+        padding: 55px 20px 60px;
+      }
+
+      .hero-inner {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        text-align: center;
+      }
+
+      .hero p {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .buttons {
+        justify-content: center;
+      }
+
+      .hero-photo {
+        max-width: 360px;
+        transform: none;
+      }
+
+      .hero-photo img {
+        height: 390px;
+      }
+
+      .service-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-grid {
         max-width: 430px;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns: repeat(2, 1fr);
         gap: 12px;
-    }
+      }
 
-    .gallery-item img {
+      .gallery-grid img {
         height: 145px;
+      }
+
+      section {
+        padding: 60px 18px;
+      }
     }
 
-    .gallery-item span {
-        font-size: 12px;
-    }
-
-    .social-links {
-        gap: 12px;
-    }
-
-    .social-card {
-        width: 155px;
-        min-height: 135px;
-        padding: 16px 10px;
-    }
-
-    .bible-verse {
-        padding-top: 18px;
-    }
-}
-
-@media (max-width: 350px) {
-    .gallery-grid {
+    @media (max-width: 350px) {
+      .gallery-grid {
         grid-template-columns: 1fr;
         max-width: 280px;
+      }
+
+      .gallery-grid img {
+        height: 175px;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
     }
 
-    .gallery-item img {
-        height: 175px;
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
     }
-}
-</style>
+  </style>
 </head>
 
 <body>
 
-<!-- CABEÇALHO -->
-<header class="header">
+  <div class="christmas-lights"></div>
 
-    <a href="#inicio" class="logo">
-        RAQUEL SUZAN
-        <span>LASH STUDIO</span>
-    </a>
+  <header>
+    <div class="header-inner">
+      <a href="#inicio" class="logo">
+        Raquel Suzan
+        <span>Lash Studio</span>
+      </a>
 
-    <nav class="nav-links">
+      <nav aria-label="Navegação principal">
         <a href="#inicio">Início</a>
         <a href="#sobre">Sobre mim</a>
         <a href="#servicos">Serviços</a>
         <a href="#galeria">Inspirações</a>
         <a href="#contato">Contato</a>
-    </nav>
+      </nav>
 
-    <button class="menu-toggle" aria-label="Abrir menu">☰</button>
-
-</header>
-
-<main>
-
-<!-- INÍCIO -->
-<section class="hero" id="inicio">
-
-    <div class="hero-content">
-
-        <span class="eyebrow">
-            BELEZA • DELICADEZA • AUTOESTIMA
-        </span>
-
-        <h1>
-            Seu olhar merece<br>
-            <em>um toque especial.</em>
-        </h1>
-
-        <p>
-            Realçando sua beleza natural com delicadeza,
-            carinho e atenção em cada detalhe.
-        </p>
-
-        <a href="#contato" class="button">
-            AGENDAR MEU HORÁRIO
-        </a>
-
+      <details class="quick-menu">
+        <summary class="menu-button" aria-label="Abrir menu">⋮</summary>
+        <div class="menu-panel">
+          <a href="https://wa.me/555193852951?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20hor%C3%A1rio!" target="_blank" rel="noopener">♡ Agendar horário</a>
+          <a href="https://wa.me/555193852951?text=Ol%C3%A1%2C%20gostaria%20de%20consultar%20os%20valores%20dos%20procedimentos." target="_blank" rel="noopener">✧ Consultar valores</a>
+          <a href="https://wa.me/555193852951?text=Ol%C3%A1%2C%20tenho%20uma%20d%C3%BAvida%20e%20gostaria%20de%20ajuda." target="_blank" rel="noopener">? Dúvidas e suporte</a>
+          <a href="https://wa.me/555193852951?text=Ol%C3%A1%2C%20gostaria%20de%20enviar%20uma%20sugest%C3%A3o%20ou%20reclama%C3%A7%C3%A3o." target="_blank" rel="noopener">♡ Sugestões e reclamações</a>
+          <a href="https://www.instagram.com/raquel_suzan2/" target="_blank" rel="noopener">◎ Instagram da Raquel</a>
+        </div>
+      </details>
     </div>
+  </header>
 
-    <div class="hero-image">
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-inner">
+        <div class="hero-content reveal">
+          <span class="season-label">✦ EDIÇÃO ESPECIAL DE FIM DE ANO ✦</span>
 
-        <img
-            src="https://eliteaae.com/cdn/shop/files/Advanced_Lash_Extension_Training_Courses_Austin.png?height=800&v=1740511330"
-            alt="Profissional realizando aplicação de extensão de cílios"
-            loading="eager">
+          <h1>Realce sua beleza e <em>ilumine seu olhar.</em></h1>
 
-    </div>
+          <p>
+            Um olhar especial transforma tudo. Descubra o cuidado,
+            a delicadeza e a beleza de cílios feitos para valorizar
+            sua essência.
+          </p>
 
-</section>
+          <div class="buttons">
+            <a class="btn btn-primary" href="https://wa.me/555193852951?text=Ol%C3%A1%2C%20Raquel!%20Quero%20agendar%20meu%20hor%C3%A1rio.">
+              Agendar meu horário
+            </a>
 
-<!-- SOBRE -->
-<section class="about" id="sobre">
+            <a class="btn btn-secondary" href="https://wa.me/555193852951?text=Ol%C3%A1%2C%20gostaria%20de%20consultar%20os%20valores.">
+              Consultar valores
+            </a>
+          </div>
+        </div>
 
-    <span class="eyebrow">UM POUCO SOBRE MIM</span>
+        <div class="hero-photo reveal">
+          <img src="imagens/raquel.jpg" alt="Raquel Suzan Lash Studio">
+        </div>
+      </div>
+    </section>
 
-    <h2>
-        Beleza que começa<br>
-        <em>no olhar.</em>
-    </h2>
+    <section class="about" id="sobre">
+      <div class="section-inner reveal">
+        <div class="section-heading">
+          <small>Conheça o estúdio</small>
+          <h2>Sobre mim</h2>
+        </div>
 
-    <p>
-        Seja bem-vinda ao meu espaço! Aqui cada atendimento
-        é pensado para valorizar sua beleza e proporcionar
-        um momento especial de cuidado, carinho e autoestima.
-    </p>
+        <div class="about-card">
+          <p>
+            Seja muito bem-vinda ao meu espaço! Aqui cada detalhe é pensado
+            com carinho para valorizar sua beleza e proporcionar uma
+            experiência especial. Meu objetivo é realçar seu olhar com
+            delicadeza, cuidado e atenção a cada detalhe.
+          </p>
+          <br>
+          <p><strong>Será um prazer cuidar de você!</strong></p>
+        </div>
+      </div>
+    </section>
 
-    <strong>Com carinho, Raquel Suzan.</strong>
+    <section class="services" id="servicos">
+      <div class="section-inner">
+        <div class="section-heading reveal">
+          <small>Cuidados especiais</small>
+          <h2>Meus serviços</h2>
+          <p>Realce sua beleza com um resultado pensado para combinar com você.</p>
+        </div>
 
-</section>
-
-<!-- SERVIÇOS -->
-<section class="services" id="servicos">
-
-    <span class="eyebrow">CUIDADO EM CADA DETALHE</span>
-
-    <h2>Meus serviços</h2>
-
-    <div class="service-grid">
-
-        <article class="service-card">
-            <span>01</span>
+        <div class="service-grid">
+          <article class="service-card reveal">
+            <div class="service-icon">✧</div>
             <h3>Extensão de cílios</h3>
-            <p>
-                Um olhar realçado e personalizado
-                para valorizar sua beleza.
-            </p>
-        </article>
+            <p>Um olhar marcante e delicado, respeitando seu estilo e sua beleza.</p>
+          </article>
 
-        <article class="service-card">
-            <span>02</span>
+          <article class="service-card reveal">
+            <div class="service-icon">♡</div>
             <h3>Manutenção</h3>
-            <p>
-                Cuidados para preservar a beleza
-                e a durabilidade dos cílios.
-            </p>
-        </article>
+            <p>Cuidados para manter seus cílios bonitos e bem apresentados.</p>
+          </article>
 
-        <article class="service-card">
-            <span>03</span>
+          <article class="service-card reveal">
+            <div class="service-icon">❀</div>
             <h3>Design personalizado</h3>
-            <p>
-                Um resultado pensado para valorizar
-                o formato dos seus olhos.
-            </p>
-        </article>
+            <p>Um resultado pensado para valorizar o formato e a expressão do seu olhar.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-    </div>
-
-</section>
-
-<!-- INSPIRAÇÕES -->
-<section class="gallery" id="galeria">
-
-    <span class="eyebrow">UNIVERSO DA BELEZA</span>
-
-    <h2>
-        Inspirações para<br>
-        <em>o seu olhar.</em>
-    </h2>
-
-    <p class="gallery-intro">
-        Descubra estilos e possibilidades para
-        realçar ainda mais sua beleza.
-    </p>
-
-    <div class="gallery-grid">
-
-        <div class="gallery-item">
-            <img
-                src="https://images.pexels.com/photos/5128234/pexels-photo-5128234.jpeg?auto=compress&dpr=1&w=800"
-                alt="Inspiração de beleza e cílios"
-                loading="lazy">
-
-            <span>Beleza em cada detalhe</span>
+    <section class="gallery" id="galeria">
+      <div class="section-inner">
+        <div class="section-heading reveal">
+          <small>Inspire-se</small>
+          <h2>Inspirações para o seu olhar</h2>
+          <p>Algumas referências de beleza e delicadeza para inspirar seu próximo visual.</p>
         </div>
 
-        <div class="gallery-item">
-            <img
-                src="https://eliteaae.com/cdn/shop/files/Advanced_Lash_Extension_Training_Courses_Austin.png?height=800&v=1740511330"
-                alt="Aplicação de extensão de cílios"
-                loading="lazy">
+        <div class="gallery-grid reveal">
+          <img src="https://images.pexels.com/photos/5128234/pexels-photo-5128234.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Inspiração de beleza para os olhos" loading="lazy">
 
-            <span>Delicadeza e cuidado</span>
+          <img src="https://eliteaae.com/cdn/shop/files/Advanced_Lash_Extension_Training_Courses_Austin.png?height=800&v=1740511330" alt="Aplicação de extensão de cílios" loading="lazy">
+
+          <img src="https://images.pexels.com/photos/34930118/pexels-photo-34930118.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Inspiração de olhar" loading="lazy">
         </div>
+      </div>
+    </section>
 
-        <div class="gallery-item">
-            <img
-                src="https://images.pexels.com/photos/34930118/pexels-photo-34930118/free-photo-of-close-up-of-eyelash-extension-application-in-salon.jpeg?auto=compress&dpr=1&w=800"
-                alt="Inspiração de procedimento de cílios"
-                loading="lazy">
-
-            <span>Um olhar especial</span>
-        </div>
-
-    </div>
-
-    <small class="gallery-note">
-        Imagens ilustrativas de referência. Em breve,
-        fotos exclusivas dos nossos atendimentos.
-    </small>
-
-</section>
-
-<!-- CONTATO -->
-<section class="contact" id="contato">
-
-    <span class="eyebrow">SEU MOMENTO ESPECIAL</span>
-
-    <h2>
-        Vamos realçar<br>
-        <em>sua beleza?</em>
-    </h2>
-
-    <p>Será um prazer cuidar de você!</p>
-
-    <div class="social-links">
-
-        <!-- INSTAGRAM -->
-        <a
-            href="https://www.instagram.com/raquel_suzan2/"
-            class="social-card"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Instagram de Raquel Suzan">
-
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 5-5V7c0-2.76-2.24-5-5-5H7zm0 2h10c1.66 0 3 1.34 3 3v10c0 1.66-1.34 3-3 3H7c-1.66 0-3-1.34-3-3V7c0-1.66 1.34-3 3-3zm10.5 1.5a1 1 0 1 0 0 2 1 1 0 0 0 0-2zM12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6z"/>
-            </svg>
-
-            <strong>Raquel Suzan</strong>
-            <span>@raquel_suzan2</span>
-
-        </a>
-
-        <!-- WHATSAPP -->
-        <a
-            href="https://wa.me/555193852951?text=Ol%C3%A1!%20Conheci%20seu%20trabalho%20pelo%20site%20da%20Raquel%20Suzan%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio."
-            class="social-card"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="WhatsApp de Raquel Suzan">
-
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M12 2a9.9 9.9 0 0 0-8.56 14.86L2 22l5.29-1.39A10 10 0 1 0 12 2zm0 2a8 8 0 0 1 0 16c-1.35 0-2.67-.34-3.85-.99l-.38-.21-3.14.82.84-3.05-.23-.39A8 8 0 0 1 12 4zm-3.4 3.5c-.2 0-.5.08-.76.37-.26.29-.99.97-.99 2.36s1.02 2.73 1.16 2.92c.14.19 1.97 3.15 4.87 4.29 2.4.94 2.9.75 3.42.7.52-.05 1.68-.69 1.92-1.36.24-.67.24-1.24.17-1.36-.07-.12-.26-.19-.55-.33-.29-.14-1.68-.83-1.94-.92-.26-.1-.45-.14-.64.15-.19.29-.73.92-.9 1.11-.16.19-.33.22-.62.07-.29-.14-1.21-.45-2.31-1.43-.85-.76-1.43-1.7-1.6-1.99-.17-.29-.02-.45.13-.6.13-.13.29-.33.43-.5.14-.17.19-.29.29-.48.1-.19.05-.36-.02-.5-.07-.14-.64-1.55-.88-2.12-.23-.55-.47-.48-.64-.49z"/>
-            </svg>
-
-            <strong>Fale com a Raquel</strong>
-            <span>Agende seu horário</span>
-
-        </a>
-
-    </div>
-
-</section>
-
-<!-- SALMO -->
-<div class="bible-verse">
-
-    <p>
-        “Eu te louvo porque me fizeste de modo especial e admirável.”
-    </p>
-
-    <small>SALMOS 139:14</small>
-
-</div>
-
-</main>
-
-<!-- RODAPÉ -->
-<footer>
-
-    <h3>RAQUEL SUZAN</h3>
-
-    <p>LASH STUDIO</p>
-
-    <p>Beleza, delicadeza e autoestima.</p>
-
-    <small>
-        © 2026 Raquel Suzan. Todos os direitos reservados.
-    </small>
-
-</footer>
-
-<!-- WHATSAPP FLUTUANTE -->
-<a
-    href="https://wa.me/555193852951?text=Ol%C3%A1!%20Gostaria%20de%20conhecer%20os%20servi%C3%A7os%20da%20Raquel%20Suzan."
-    class="whatsapp-float"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="Conversar pelo WhatsApp">
-
-    WhatsApp
-
-</a>
-
-<script src="script.js"></script>
-
-</body>
-</html>
+    <section class="christmas-banner">
+      <h2>Seu olhar merece brilhar neste Natal!</h2>
+      <p>
+        As festas estão chegando! Reserve seu horário e prepare-se
+        para celebrar essa época especial se sentindo ainda mais linda.
+      </p>
+      <a class="btn" href="https://wa.me/555193852951?text=Ol%C3%A1%2C%20Raquel!%20Quero%20reservar%20meu%20hor%C3%A1rio%20para
