@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
     ".whatsapp, .btn-whatsapp, [data-whatsapp]"
   );
 
-  const telefone = "55SEUDDDSEUNUMERO";
+  const telefone = "555193852951";
 
   const mensagem = encodeURIComponent(
     "Olá! Conheci seu trabalho pelo site da Suzan Lash Studio e gostaria de agendar um horário. 💖"
