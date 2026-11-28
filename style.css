@@ -783,3 +783,14 @@ footer p {
     height: 85px;
   }
 }
+/* Suzi posicionada no lado direito */
+.suzi-launcher {
+  left: auto !important;
+  right: 20px !important;
+  bottom: 20px !important;
+}
+
+.suzi-panel {
+  left: auto !important;
+  right: 20px !important;
+}
