@@ -794,3 +794,10 @@ footer p {
   left: auto !important;
   right: 20px !important;
 }
+/* Ocultar botão flutuante do WhatsApp */
+.whatsapp-float,
+.whatsapp-button,
+.whatsapp-fixed,
+#whatsapp-float {
+  display: none !important;
+}
