@@ -1,248 +1,119 @@
-
-/* =================================
-   RAQUEL SUZAN — LASH STUDIO
-   Identidade visual premium
-   ================================= */
-
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
-
-:root {
-  --rose: #bd8585;
-  --rose-dark: #925e62;
-  --rose-light: #f5e7e4;
-  --nude: #f9f4ef;
-  --cream: #fffaf6;
-  --gold: #bd9b69;
-  --dark: #342b29;
-  --text: #655653;
-  --white: #ffffff;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: 'DM Sans', sans-serif;
-  background: var(--cream);
-  color: var(--dark);
-  overflow-x: hidden;
-}
-
-h1, h2, h3 {
-  font-family: 'Playfair Display', serif;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-button {
-  font-family: inherit;
-  cursor: pointer;
-}
-
-/* ANIMAÇÕES */
-
-@keyframes aparecer {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes flutuar {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-12px);
-  }
-}
-
-@keyframes brilho {
-  0%, 100% {
-    box-shadow: 0 0 12px rgba(189, 155, 105, .15);
-  }
-  50% {
-    box-shadow: 0 0 28px rgba(189, 155, 105, .4);
-  }
-}
-
-@keyframes pulsar {
-  0%, 100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.04);
-  }
-}
-
-/* BOTÕES */
-
-.btn,
-button {
-  transition: all .35s ease;
-}
-
-.btn:hover,
-button:hover {
-  transform: translateY(-3px);
-}
-
-/* SEÇÕES */
-
-section {
-  padding: 85px 7%;
-}
-
-.section-title {
-  text-align: center;
-  margin-bottom: 45px;
-}
-
-.section-title h2 {
-  font-size: clamp(30px, 5vw, 46px);
-  color: var(--rose-dark);
-  margin-bottom: 12px;
-}
-
-.section-title p {
-  color: var(--text);
-}
-
-/* IMAGENS */
-
-img {
-  max-width: 100%;
-  display: block;
-}
-
-/* CARTÕES */
-
-.card {
-  background: var(--white);
-  border-radius: 18px;
-  padding: 28px;
-  box-shadow: 0 8px 30px rgba(70, 40, 35, .06);
-  transition: transform .4s ease, box-shadow .4s ease;
-}
-
-.card:hover {
-  transform: translateY(-7px);
-  box-shadow: 0 15px 35px rgba(70, 40, 35, .12);
-}
-
-/* WHATSAPP */
-
-.whatsapp-button {
+/* PERSONAGEM SUZI */
+#suzi {
   position: fixed;
-  right: 22px;
-  bottom: 22px;
-  z-index: 1000;
-  background: #25d366;
-  color: white;
-  width: 58px;
-  height: 58px;
-  border-radius: 50%;
+  right: 18px;
+  bottom: 15px;
+  z-index: 9999;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: 27px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, .18);
-  animation: pulsar 3s ease-in-out infinite;
+  gap: 8px;
 }
 
-/* ASSISTENTE SUZI */
-
-.suzi-container {
-  position: fixed;
-  right: 22px;
-  bottom: 95px;
-  z-index: 999;
-  display: flex;
-  align-items: flex-end;
-  gap: 12px;
+.suzi-personagem {
+  position: relative;
+  width: 145px;
+  animation: suziFlutuar 3s ease-in-out infinite;
 }
 
-.suzi-avatar {
-  width: 115px;
-  height: 170px;
+.suzi-personagem img {
+  display: block;
+  width: 100%;
+  height: auto;
   object-fit: contain;
-  animation: flutuar 5s ease-in-out infinite;
-  filter: drop-shadow(0 8px 15px rgba(70, 40, 35, .15));
-  cursor: pointer;
+  filter: drop-shadow(0 5px 9px #0003);
 }
 
-.suzi-chat {
-  width: min(340px, calc(100vw - 40px));
+.suzi-ola {
+  position: absolute;
+  top: 8px;
+  right: -12px;
   background: white;
-  border-radius: 20px;
-  padding: 20px;
-  box-shadow: 0 10px 40px rgba(50, 30, 30, .16);
-  border: 1px solid var(--rose-light);
+  color: #c34f83;
+  padding: 7px 12px;
+  border-radius: 15px;
+  font-size: 12px;
+  box-shadow: 0 2px 8px #0002;
 }
 
-.suzi-chat h3 {
-  color: var(--rose-dark);
-  margin-bottom: 10px;
-}
-
-.suzi-chat p {
-  color: var(--text);
-  line-height: 1.6;
-  font-size: 14px;
-}
-
-.suzi-chat button {
-  background: var(--rose);
+#suzi-toggle {
+  background: linear-gradient(135deg, #e879aa, #bd4d83);
   color: white;
   border: none;
   border-radius: 25px;
   padding: 12px 18px;
-  margin-top: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 12px #0003;
 }
 
-/* RESPONSIVIDADE */
-
-@media (max-width: 768px) {
-  section {
-    padding: 60px 5%;
-  }
-
-  .section-title h2 {
-    font-size: 32px;
-  }
-
-  .suzi-container {
-    right: 12px;
-    bottom: 85px;
-  }
-
-  .suzi-avatar {
-    width: 85px;
-    height: 130px;
-  }
-
-  .suzi-chat {
-    width: min(280px, calc(100vw - 30px));
-  }
+@keyframes suziFlutuar {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-9px); }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
-    animation-duration: .01ms !important;
-    scroll-behavior: auto !important;
-  }
+/* JANELA DO CHAT */
+#suzi-chat {
+  display: none;
+  position: fixed;
+  right: 18px;
+  bottom: 20px;
+  width: min(330px, calc(100vw - 36px));
+  height: 420px;
+  background: white;
+  border-radius: 18px;
+  overflow: hidden;
+  z-index: 10000;
+  box-shadow: 0 5px 25px #0004;
+  flex-direction: column;
+}
+
+#suzi-chat.ativo {
+  display: flex;
+}
+
+.suzi-topo {
+  background: linear-gradient(135deg, #e879aa, #bd4d83);
+  color: white;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#suzi-close {
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+#suzi-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 15px;
+  color: #444;
+}
+
+#suzi-form {
+  display: flex;
+  padding: 10px;
+  gap: 6px;
+  border-top: 1px solid #eee;
+}
+
+#suzi-input {
+  min-width: 0;
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+}
+
+#suzi-form button {
+  background: #d65e95;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 13px;
 }
