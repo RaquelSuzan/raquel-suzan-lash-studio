@@ -1,124 +1,27 @@
-
-<!-- ===================================
-     ASSISTENTE VIRTUAL SUZI
-     RAQUEL SUZAN | LASH STUDIO
-=================================== -->
-
-<div class="suzi-container">
-
-  <div class="suzi-chat" id="suzi-chat" aria-hidden="true">
-
-    <div class="suzi-chat-header">
-      <h3>Suzi 💗</h3>
-      <button id="suzi-close" type="button" aria-label="Fechar conversa">×</button>
-    </div>
-
-    <div id="suzi-messages" aria-live="polite"></div>
-
-    <form id="suzi-form">
-      <input
-        id="suzi-input"
-        type="text"
-        placeholder="Digite sua mensagem..."
-        autocomplete="off"
-        required
-      />
-      <button type="submit">Enviar</button>
-    </form>
-
+<!-- ASSISTENTE SUZI -->
+<div id="suzi">
+  <div class="suzi-personagem">
+    <img src="images/suzi.gif" alt="Suzi - Assistente Virtual">
+    <span class="suzi-ola">Olá! 💗</span>
   </div>
 
-  <img
-    id="suzi"
-    class="suzi-avatar"
-    src="images/suzi.png"
-    alt="Suzi, assistente virtual do Lash Studio"
-    title="Converse com a Suzi"
-  />
-
+  <button id="suzi-toggle" aria-label="Conversar com a Suzi">
+    💬 Falar com a Suzi
+  </button>
 </div>
 
-<style>
-  .suzi-chat {
-    display: none;
-    flex-direction: column;
-    position: relative;
-  }
+<div id="suzi-chat">
+  <div class="suzi-topo">
+    <strong>Suzi | Lash Studio 💗</strong>
+    <button id="suzi-close" aria-label="Fechar">×</button>
+  </div>
 
-  .suzi-chat.ativo {
-    display: flex;
-  }
+  <div id="suzi-messages">
+    <p>Oi, linda! Sou a Suzi! 💕 Como posso te ajudar?</p>
+  </div>
 
-  .suzi-chat-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 12px;
-  }
-
-  .suzi-chat-header button {
-    border: none;
-    background: transparent;
-    font-size: 25px;
-    color: #925e62;
-  }
-
-  #suzi-messages {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    max-height: 230px;
-    overflow-y: auto;
-    padding: 8px 0;
-  }
-
-  .mensagem {
-    padding: 10px 13px;
-    border-radius: 13px;
-    font-size: 13px;
-    line-height: 1.5;
-    max-width: 90%;
-  }
-
-  .mensagem-suzi {
-    background: #f5e7e4;
-    align-self: flex-start;
-  }
-
-  .mensagem-cliente {
-    background: #bd8585;
-    color: white;
-    align-self: flex-end;
-  }
-
-  #suzi-form {
-    display: flex;
-    gap: 6px;
-    margin-top: 10px;
-  }
-
-  #suzi-input {
-    min-width: 0;
-    flex: 1;
-    padding: 11px;
-    border: 1px solid #ead5d3;
-    border-radius: 20px;
-    outline: none;
-  }
-
-  #suzi-form button {
-    border: none;
-    border-radius: 20px;
-    padding: 10px 14px;
-    background: #bd8585;
-    color: white;
-  }
-
-  .suzi-avatar {
-    cursor: pointer;
-  }
-</style>
-
-<script src="script.js"></script>
-</body>
-</html>
+  <form id="suzi-form">
+    <input id="suzi-input" placeholder="Digite sua mensagem..." required>
+    <button type="submit">Enviar</button>
+  </form>
+</div>
