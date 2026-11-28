@@ -1,119 +1,785 @@
-/* PERSONAGEM SUZI */
-#suzi {
+
+:root {
+  --cream: #fbf5f0;
+  --rose: #d69a9b;
+  --rose-dark: #a85f68;
+  --wine: #6f3545;
+  --brown: #604b45;
+  --gold: #c6a36a;
+  --white: #fff;
+  --shadow: 0 12px 35px rgba(91, 53, 57, .12);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--cream);
+  color: var(--brown);
+  font-family: "DM Sans", sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+}
+
+header {
+  background: rgba(255, 250, 246, .96);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  box-shadow: 0 3px 18px rgba(80, 45, 45, .06);
+}
+
+.header-inner {
+  max-width: 1180px;
+  margin: auto;
+  padding: 15px 24px;
+  min-height: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.logo {
+  color: var(--wine);
+  font-family: "Playfair Display", serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+.logo span {
+  display: block;
+  font-family: "DM Sans", sans-serif;
+  font-size: 10px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 5px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+nav a {
+  font-size: 13px;
+  font-weight: 600;
+  transition: color .2s;
+}
+
+nav a:hover {
+  color: var(--rose-dark);
+}
+
+.quick-menu {
+  position: relative;
+}
+
+.menu-button {
+  list-style: none;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #f2e2df;
+  color: var(--wine);
+  font-size: 25px;
+}
+
+.menu-button::-webkit-details-marker {
+  display: none;
+}
+
+.menu-panel {
+  position: absolute;
+  right: 0;
+  top: 48px;
+  width: 225px;
+  padding: 10px;
+  border-radius: 15px;
+  background: white;
+  box-shadow: var(--shadow);
+  display: grid;
+  gap: 4px;
+}
+
+.menu-panel a {
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 13px;
+}
+
+.menu-panel a:hover {
+  background: var(--cream);
+  color: var(--rose-dark);
+}
+
+.hero {
+  padding: 75px 24px;
+  background: linear-gradient(115deg, #f9e9e5, #fff9f4 65%, #f2ded9);
+  overflow: hidden;
+}
+
+.hero-inner {
+  max-width: 1180px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr .9fr;
+  align-items: center;
+  gap: 65px;
+}
+
+.season-label {
+  display: inline-block;
+  color: var(--rose-dark);
+  letter-spacing: 2px;
+  font-size: 10px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-family: "Playfair Display", serif;
+  color: var(--wine);
+  font-size: clamp(42px, 5vw, 68px);
+  font-weight: 500;
+  line-height: 1.12;
+  margin-bottom: 22px;
+}
+
+.hero h1 em {
+  color: var(--rose-dark);
+}
+
+.hero-content > p {
+  max-width: 480px;
+  font-size: 16px;
+  color: #765f58;
+  margin-bottom: 30px;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 13px 22px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 700;
+  transition: transform .2s, box-shadow .2s;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
+}
+
+.btn-primary {
+  background: var(--wine);
+  color: white;
+}
+
+.btn-secondary {
+  border: 1px solid var(--rose-dark);
+  color: var(--wine);
+}
+
+.hero-photo {
+  height: 440px;
+  overflow: hidden;
+  border-radius: 48% 48% 20px 20px;
+  box-shadow: var(--shadow);
+}
+
+.hero-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.section-inner {
+  max-width: 1120px;
+  margin: auto;
+  padding: 85px 24px;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-heading small {
+  color: var(--rose-dark);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.section-heading h2 {
+  color: var(--wine);
+  font-family: "Playfair Display", serif;
+  font-size: clamp(32px, 4vw, 44px);
+  font-weight: 500;
+  margin: 8px 0 12px;
+}
+
+.section-heading p {
+  color: #806b64;
+  font-size: 14px;
+}
+
+.about {
+  background: #fffaf6;
+}
+
+.about-card {
+  max-width: 760px;
+  margin: auto;
+  padding: 35px;
+  border: 1px solid #f0dfd8;
+  border-radius: 20px;
+  background: white;
+  text-align: center;
+  box-shadow: var(--shadow);
+  font-size: 15px;
+}
+
+.about-card strong {
+  color: var(--wine);
+}
+
+.services {
+  background: #f8eeea;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.service-card {
+  padding: 32px 24px;
+  text-align: center;
+  background: white;
+  border: 1px solid #f0dfd8;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(91, 53, 57, .06);
+  transition: transform .25s;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+}
+
+.service-icon {
+  color: var(--rose-dark);
+  font-size: 35px;
+  margin-bottom: 12px;
+}
+
+.service-card h3 {
+  color: var(--wine);
+  font-family: "Playfair Display", serif;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  color: #806b64;
+  font-size: 13px;
+}
+
+.gallery {
+  background: #fffaf6;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 330px;
+  object-fit: cover;
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  transition: transform .3s;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.025);
+}
+
+.christmas-banner {
+  padding: 75px 24px;
+  text-align: center;
+  color: white;
+  background: linear-gradient(120deg, #683444, #9c5964, #683444);
+}
+
+.christmas-banner h2 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(30px, 4vw, 43px);
+  margin-bottom: 14px;
+}
+
+.christmas-banner p {
+  max-width: 620px;
+  margin: 0 auto 25px;
+  font-size: 14px;
+  color: #f8e9e7;
+}
+
+.christmas-banner .btn {
+  background: #f5e5d6;
+  color: var(--wine);
+}
+
+.contact {
+  background: #f9eee9;
+}
+
+.contact-grid {
+  max-width: 760px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.contact-card {
+  padding: 30px 20px;
+  background: white;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+
+.contact-card .symbol {
+  font-size: 30px;
+  color: var(--rose-dark);
+}
+
+.contact-card h3 {
+  color: var(--wine);
+  font-family: "Playfair Display", serif;
+  font-size: 22px;
+  margin: 8px 0;
+}
+
+.contact-card p {
+  font-size: 13px;
+  margin-bottom: 15px;
+}
+
+.contact-card a {
+  color: var(--rose-dark);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.verse {
+  padding: 55px 20px;
+  text-align: center;
+  background: #fffaf6;
+}
+
+.verse-decoration {
+  color: var(--gold);
+  letter-spacing: 9px;
+  margin-bottom: 15px;
+}
+
+.verse p {
+  font-family: "Playfair Display", serif;
+  font-size: 23px;
+  color: var(--wine);
+}
+
+.verse small {
+  display: block;
+  margin-top: 12px;
+  color: var(--rose-dark);
+  letter-spacing: 3px;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+footer {
+  padding: 30px 20px;
+  background: #4c2934;
+  color: #f8e9e7;
+  text-align: center;
+}
+
+footer strong {
+  font-family: "Playfair Display", serif;
+  font-size: 21px;
+}
+
+footer p {
+  margin-top: 7px;
+  font-size: 12px;
+  color: #e7c9c7;
+}
+
+.floating-whatsapp {
   position: fixed;
-  right: 18px;
-  bottom: 15px;
-  z-index: 9999;
+  z-index: 30;
+  right: 22px;
+  bottom: 22px;
+  width: 55px;
+  height: 55px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #25d366;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, .2);
+}
+
+.floating-whatsapp svg {
+  width: 27px;
+  height: 27px;
+  fill: white;
+}
+
+/* SUZI - assistente virtual */
+
+.suzi-launcher {
+  position: fixed;
+  z-index: 40;
+  left: 12px;
+  bottom: 12px;
+  width: 112px;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
+  animation: suziFloat 4s ease-in-out infinite;
 }
 
-.suzi-personagem {
-  position: relative;
-  width: 145px;
-  animation: suziFlutuar 3s ease-in-out infinite;
-}
-
-.suzi-personagem img {
+.suzi-launcher img {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100px;
   object-fit: contain;
-  filter: drop-shadow(0 5px 9px #0003);
+  filter: drop-shadow(0 5px 7px rgba(80, 40, 45, .2));
 }
 
-.suzi-ola {
-  position: absolute;
-  top: 8px;
-  right: -12px;
+.suzi-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 10px;
   background: white;
-  color: #c34f83;
-  padding: 7px 12px;
-  border-radius: 15px;
-  font-size: 12px;
-  box-shadow: 0 2px 8px #0002;
+  color: var(--wine);
+  border: 1px solid #f0d9d7;
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  font-size: 10px;
+  font-weight: 700;
+  white-space: nowrap;
 }
 
-#suzi-toggle {
-  background: linear-gradient(135deg, #e879aa, #bd4d83);
-  color: white;
-  border: none;
-  border-radius: 25px;
-  padding: 12px 18px;
-  font-weight: bold;
-  cursor: pointer;
-  box-shadow: 0 4px 12px #0003;
+.suzi-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #39b66c;
 }
 
-@keyframes suziFlutuar {
+@keyframes suziFloat {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-9px); }
+  50% { transform: translateY(-7px); }
 }
 
-/* JANELA DO CHAT */
-#suzi-chat {
+.suzi-panel {
   display: none;
   position: fixed;
-  right: 18px;
-  bottom: 20px;
-  width: min(330px, calc(100vw - 36px));
-  height: 420px;
+  z-index: 50;
+  left: 18px;
+  bottom: 145px;
+  width: min(350px, calc(100vw - 36px));
+  height: min(490px, calc(100vh - 190px));
   background: white;
-  border-radius: 18px;
+  border: 1px solid #f0d9d7;
+  border-radius: 20px;
+  box-shadow: 0 15px 50px rgba(50, 25, 30, .2);
   overflow: hidden;
-  z-index: 10000;
-  box-shadow: 0 5px 25px #0004;
   flex-direction: column;
 }
 
-#suzi-chat.ativo {
+.suzi-panel.open {
   display: flex;
+  animation: suziAppear .25s ease-out;
 }
 
-.suzi-topo {
-  background: linear-gradient(135deg, #e879aa, #bd4d83);
-  color: white;
-  padding: 16px;
-  display: flex;
-  justify-content: space-between;
+@keyframes suziAppear {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-#suzi-close {
-  border: none;
-  background: transparent;
+.suzi-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 15px;
+  background: linear-gradient(110deg, #713a4b, #a66b72);
   color: white;
-  font-size: 24px;
+}
+
+.suzi-head img {
+  width: 46px;
+  height: 46px;
+  object-fit: contain;
+  background: #f9e9e5;
+  border-radius: 50%;
+}
+
+.suzi-head strong,
+.suzi-head small {
+  display: block;
+}
+
+.suzi-head strong {
+  font-size: 15px;
+}
+
+.suzi-head small {
+  font-size: 10px;
+  color: #f8e2df;
+}
+
+.suzi-close {
+  margin-left: auto;
+  width: 32px;
+  height: 32px;
+  border: 0;
+  border-radius: 50%;
+  color: white;
+  background: rgba(255,255,255,.15);
+  font-size: 23px;
   cursor: pointer;
 }
 
-#suzi-messages {
+.suzi-messages {
   flex: 1;
-  overflow-y: auto;
   padding: 15px;
-  color: #444;
-}
-
-#suzi-form {
+  overflow-y: auto;
   display: flex;
-  padding: 10px;
-  gap: 6px;
-  border-top: 1px solid #eee;
+  flex-direction: column;
+  gap: 10px;
+  background: #fffaf7;
 }
 
-#suzi-input {
-  min-width: 0;
-  flex: 1;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 20px;
-}
-
-#suzi-form button {
-  background: #d65e95;
-  color: white;
-  border: none;
-  border-radius: 20px;
+.suzi-msg {
+  max-width: 88%;
   padding: 10px 13px;
+  border-radius: 14px;
+  font-size: 12px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.suzi-msg.bot {
+  align-self: flex-start;
+  color: #684b4b;
+  background: #f4e7e4;
+  border-bottom-left-radius: 4px;
+}
+
+.suzi-msg.user {
+  align-self: flex-end;
+  color: white;
+  background: #874e5d;
+  border-bottom-right-radius: 4px;
+}
+
+.suzi-quick {
+  padding: 8px 10px;
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  background: #fffaf7;
+}
+
+.suzi-quick button {
+  flex: 0 0 auto;
+  padding: 7px 10px;
+  border: 1px solid #e7c9c7;
+  border-radius: 20px;
+  background: white;
+  color: var(--wine);
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.suzi-form {
+  display: flex;
+  gap: 8px;
+  padding: 10px;
+  border-top: 1px solid #f0e1dc;
+}
+
+.suzi-form input {
+  flex: 1;
+  min-width: 0;
+  padding: 11px 13px;
+  border: 1px solid #ead7d3;
+  border-radius: 25px;
+  outline: none;
+  font-size: 12px;
+}
+
+.suzi-form input:focus {
+  border-color: var(--rose-dark);
+}
+
+.suzi-form button {
+  width: 40px;
+  height: 40px;
+  border: 0;
+  border-radius: 50%;
+  color: white;
+  background: var(--wine);
+  cursor: pointer;
+}
+
+.suzi-note {
+  padding: 0 10px 9px;
+  text-align: center;
+  color: #9b8580;
+  font-size: 9px;
+  background: white;
+}
+
+.christmas-lights {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  z-index: 25;
+  pointer-events: none;
+  background: repeating-linear-gradient(90deg, #b84a4a 0 10px, #e5c27c 10px 20px, #477b5b 20px 30px);
+  opacity: .8;
+}
+
+@media (max-width: 800px) {
+  .header-inner {
+    padding: 12px 16px;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .hero {
+    padding: 50px 20px;
+  }
+
+  .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .hero-photo {
+    height: 340px;
+    max-width: 500px;
+    width: 100%;
+    margin: auto;
+  }
+
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .gallery-grid img {
+    height: 230px;
+  }
+
+  .gallery-grid img:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .section-inner {
+    padding: 65px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 21px;
+  }
+
+  .hero h1 {
+    font-size: 43px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-grid img,
+  .gallery-grid img:last-child {
+    height: 280px;
+    grid-column: auto;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-card {
+    padding: 24px 18px;
+  }
+
+  .suzi-launcher {
+    width: 92px;
+  }
+
+  .suzi-launcher img {
+    height: 85px;
+  }
 }
